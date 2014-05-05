@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'httparty'
-require './utils/api_utilities.rb'
+require 'utils/api_utilities'
 
 class Brewry
   include HTTParty
