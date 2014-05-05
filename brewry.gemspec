@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.description =  'Brewry provides an interface to the BreweryDB API. Instead of returning a struct or some other Brewry instance, it returns a hash that can quickly be inserted into ActiveRecord. It also allows you to replace the keys for certain results such as key so you can keep track of them with your own id\'s.'
   s.authors     = ['Daniel Ochoa']
   s.email       = 'dannytenaglias@gmail.com'
-  s.files       = ['lib/brewry.rb']
-  s.homepage    = 'http://danielochoa.info'
+  s.files       = ['lib/brewry.rb', 'lib/brewry/version.rb', 'lib/utils/api_utilities.rb']
+  s.homepage    = 'https://github.com/DanyHunter/brewry'
   s.license     = 'MIT'
 
   gem.required_ruby_version = '>= 1.9'
