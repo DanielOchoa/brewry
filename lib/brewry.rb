@@ -8,10 +8,11 @@ class Brewry
 
   attr_accessor :search_hash
 
-  base_uri 'http://api/brewerydb.com/v2'
+  ### Configuration ###
+
+  base_uri 'http://api.brewerydb.com/v2'
   @@api_key = nil
 
-  # config block:
   # Brewry.configure do |config|
   #   config.api_key = 'some_api_key'
   # end
@@ -26,6 +27,8 @@ class Brewry
   def self.api_key=(apikey)
     @@api_key = apikey
   end
+
+  ### Methods ###
 
   # override method_missing in order to create
   # dynamic methods for searches. Ex.:
