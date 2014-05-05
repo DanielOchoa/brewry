@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'httparty'
 
-class BreweryDB
+class Brewry
   include HTTParty
   #include ApiUtilities
 

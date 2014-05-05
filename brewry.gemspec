@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.files       = ['lib/brewry.rb']
   s.homepage    = 'http://danielochoa.info'
   s.license     = 'MIT'
+
   gem.required_ruby_version = '>= 1.9'
 
   s.add_dependency 'httparty', '~> 0.13.1'
