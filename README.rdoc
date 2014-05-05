@@ -33,3 +33,8 @@ Fetch some styles without arguments:
 
 0.0.1
 * Initialize project
+
+== TODO
+
+* Change class so it can be instantiated.
+* Add tests
