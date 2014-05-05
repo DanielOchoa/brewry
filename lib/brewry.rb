@@ -1,10 +1,11 @@
 require 'rubygems'
 require 'httparty'
-require 'utils/api_utilities'
+require_relative 'utils/brewry_string_utils'
 
 class Brewry
+  # TODO: Change class so it needs to be instantiated
+  using BrewryStringUtils
   include HTTParty
-  include ApiUtilities
 
   attr_accessor :search_hash
 
@@ -65,7 +66,7 @@ class Brewry
     return_pretty_results(search)
   end
 
-  private
+  protected
 
   # Used by the method_missing method for dynamic searches
   def self.search_for(path, options = {})
@@ -79,7 +80,7 @@ class Brewry
     return query_error(payload) if payload['status'] == 'failure'
     data = payload.parsed_response['data']
     data.map do |obj|
-      obj = underscore_and_symbolize obj
+      obj = self.underscore_and_symbolize obj
     end if data
   end
 
@@ -89,11 +90,25 @@ class Brewry
   end
 
   def self.query_error(search)
-    underscore_and_symbolize search
+    self.underscore_and_symbolize search
     # TODO: throw some exception or special fail construct
   end
 
   def self.clean_search_hash
     { query: { key: @@api_key } }
+  end
+
+  # TODO: User should be able to change the foreignkeys argument
+  def self.underscore_and_symbolize(obj, foreignkeys = :guid)
+    obj.inject({}) do |hash, (key, val)|
+      val = underscore_and_symbolize(val) if val.kind_of? Hash
+      if key == 'id'
+        hash.shift
+        hash[foreignkeys] = val
+      else
+        hash[key.underscore.to_sym] = val
+      end
+      hash
+    end
   end
 end
