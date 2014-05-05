@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 1.9'
 
-  s.add_dependency 'httparty', '~> 0.13.1'
+  s.add_dependency 'httparty', '~> 0.13'
 
   s.files         = `git ls-files`.split($\)
   s.require_paths = ['lib']
