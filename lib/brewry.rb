@@ -19,6 +19,14 @@ class Brewry
     yield self
   end
 
+  def self.api_key
+    @@api_key
+  end
+
+  def self.api_key=(apikey)
+    @@api_key = apikey
+  end
+
   # override method_missing in order to create
   # dynamic methods for searches. Ex.:
   # BreweryDB.search_beers(name: 'Corona Light')
