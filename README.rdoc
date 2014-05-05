@@ -9,6 +9,16 @@ Brewry gives you an API interface to talk to BreweryDB.
   call any endpoint on the API without me having to write code specific to that
   endpoint.
 
+== Configuration
+
+For Rails:
+
+Create an initializer in config/initializers/brewry.rb
+
+  Brewry.configure do |config|
+    config.api_key = 'some api key'
+  end
+
 == Examples
 
 Fetch some beers with the name argument:
