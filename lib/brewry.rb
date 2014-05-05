@@ -1,9 +1,10 @@
 require 'rubygems'
 require 'httparty'
+require './utils/api_utilities.rb'
 
 class Brewry
   include HTTParty
-  #include ApiUtilities
+  include ApiUtilities
 
   attr_accessor :search_hash
 
@@ -62,6 +63,7 @@ class Brewry
     return_pretty_results(search)
   end
 
+  # underscore_and_symbolize is defined in utils/api_utilities.rb
   def self.return_pretty_results(payload)
     return query_error(payload) if payload['status'] == 'failure'
     data = payload.parsed_response['data']

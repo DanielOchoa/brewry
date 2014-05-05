@@ -1,8 +1,8 @@
-module Brewry
+module ApiUtilities
   # underscores and symbolizes a Hash or Hash of Hashes recursively,
   # foreignkeys second argument transforms the id of the hash into
   # the :guid symbol by default.
-  def self.underscore_and_symbolize(obj, foreignkeys = :guid)
+  def underscore_and_symbolize(obj, foreignkeys = :guid)
     obj.inject({}) do |hash, (key, val)|
       val = underscore_and_symbolize(val) if val.kind_of? Hash
       if key == 'id'
