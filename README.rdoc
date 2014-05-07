@@ -3,11 +3,11 @@
 Brewry gives you an API interface to talk to BreweryDB.
 
 * It retuns everything as a hash so you can just pass it to ActiveRecord
-* It recursively changes the hash to change the 'id' keys into guid so it
-  doesn't interfere with your own ids.
-* It works by overriding method_missing on the Brewry class - this allows you to
-  call any endpoint on the API without me having to write code specific to that
-  endpoint.
+* It recursively changes the hash to change the 'id' keys into 'guid' so it
+  doesn't interfere with your own ActiveRecord Ids. Changing it to whatever you
+  want is on the works.
+* Because of metaprogramming, very little code is needed to touch most api
+  endoints for BreweryDB.
 
 == Configuration
 
@@ -25,7 +25,7 @@ Fetch some beers with the name argument:
 
   Brewry.search_beers(name: 'Corona Light')
 
-Fetch some styles without arguments:
+Fetch some styles without arguments - this will return all beer styles:
 
   Brewry.search_styles
 
@@ -38,3 +38,4 @@ Fetch some styles without arguments:
 
 * Change class so it can be instantiated.
 * Add tests
+* Allow changing of breweryDB id's into whatever the user needs.
