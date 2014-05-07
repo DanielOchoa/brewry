@@ -6,8 +6,10 @@ Brewry gives you an API interface to talk to BreweryDB.
 * It recursively changes the hash to change the 'id' keys into 'guid' so it
   doesn't interfere with your own ActiveRecord Ids. Changing it to whatever you
   want is on the works.
-* Because of metaprogramming, very little code is needed to touch most api
-  endoints for BreweryDB.
+* Thanks to metaprogramming we can query any api endpoint for BreweryDB. See
+  examples below.
+
+* http://www.brewerydb.com/
 
 == Configuration
 
