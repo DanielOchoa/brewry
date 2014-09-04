@@ -1,6 +1,7 @@
 == Brewry
 
-[![Build Status](https://travis-ci.org/DanyHunter/brewry.svg?branch=master)](https://travis-ci.org/DanyHunter/brewry)
+{<img src="https://travis-ci.org/DanyHunter/brewry.svg?branch=master" alt="Build
+Status" />}[https://travis-ci.org/DanyHunter/brewry]
 
 Brewry gives you an API interface to talk to BreweryDB.
 
