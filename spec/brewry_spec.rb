@@ -26,7 +26,7 @@ describe Brewry do
 
     # Styles #
     it 'should search styles' do
-      expect(Brewry.search_styles[0][:id]).to eq(1)
+      expect(Brewry.search_styles[0][:guid]).to eq(1)
     end
 
     # Brewery by name
