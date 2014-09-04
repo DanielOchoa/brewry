@@ -4,7 +4,7 @@ require 'utils/string_utils'
 
 class Brewry
   # TODO: Change class so it needs to be instantiated
-  using BrewryStringUtils
+  using StringUtils
   include HTTParty
 
   attr_accessor :search_hash
