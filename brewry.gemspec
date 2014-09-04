@@ -14,6 +14,10 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'httparty', '~> 0.13'
 
+  s.add_development_dependency 'rspec', '~> 3.0'
+  s.add_development_dependency 'vcr', '~> 2.9'
+  s.add_development_dependency 'webmock', '~> 1.18'
+
   s.files         = `git ls-files`.split($\)
   s.require_paths = ['lib']
   s.executables   = s.files.grep(%r{^bin/}).map {|f| File.basename(f)}
