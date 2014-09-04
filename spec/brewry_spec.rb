@@ -7,15 +7,6 @@ describe Brewry do
     Brewry.api_key = 'xxx'
   end
 
-  context 'settings' do
-    it 'should raise a MissingApiKey exception when no api key is set' do
-      Brewry.api_key = nil
-      expect { Brewry.search_beers(name: 'Lone Star') }.
-        to raise_error(Brewry::MissingApiKey)
-      Brewry.api_key = 'xxx'
-    end
-  end
-
   context 'return types', :vcr do
 
     subject(:results) {  Brewry.search_beers(name: 'Lone Star') }
@@ -44,4 +35,11 @@ describe Brewry do
     end
   end
 
+  context 'settings' do
+    it 'should raise a MissingApiKey exception when no api key is set' do
+      Brewry.api_key = nil
+      expect { Brewry.search_beers(name: 'Lone Star') }.
+        to raise_error(Brewry::MissingApiKey)
+    end
+  end
 end
