@@ -1,5 +1,5 @@
 require 'brewry'
-require 'VCR'
+require 'vcr'
 require 'webmock'
 
 # with VCR, there is no need to set up an api key to run tests
