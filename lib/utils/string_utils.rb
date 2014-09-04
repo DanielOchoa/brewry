@@ -1,4 +1,4 @@
-module BrewryStringUtils
+module StringUtils
   # This is a ruby refinement. Only works in ruby >= 2.0
   # This method is monkey patched into String when using Rails, but in this
   # fashion it will always be scoped to the BrewryStringUtils module.

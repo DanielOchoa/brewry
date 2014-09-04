@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'httparty'
-require_relative 'utils/brewry_string_utils'
+require './utils/string_utils'
 
 class Brewry
   # TODO: Change class so it needs to be instantiated
