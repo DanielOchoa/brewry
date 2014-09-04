@@ -39,6 +39,6 @@ PLATFORMS
 
 DEPENDENCIES
   Brewry!
-  rspec
-  vcr
-  webmock
+  rspec (~> 3.0)
+  vcr (~> 2.9)
+  webmock (~> 1.18)
