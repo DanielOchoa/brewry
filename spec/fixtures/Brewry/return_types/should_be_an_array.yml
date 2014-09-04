@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/beers?key=xxx&name=Lone%20Star
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 15 Aug 2014 00:53:44 GMT
+      Server:
+      - Apache/2.2.27 (Amazon)
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.3.28
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '392'
+      Content-Length:
+      - '2514'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"currentPage\":1,\"numberOfPages\":1,\"totalResults\":2,\"data\":[{\"id\":\"sEq2iH\",\"name\":\"Lone
+        Star\",\"styleId\":97,\"isOrganic\":\"N\",\"status\":\"verified\",\"statusDisplay\":\"Verified\",\"createDate\":\"2012-01-03
+        02:43:38\",\"updateDate\":\"2012-03-22 13:04:53\",\"style\":{\"id\":97,\"categoryId\":8,\"category\":{\"id\":8,\"name\":\"North
+        American Lager\",\"createDate\":\"2012-03-21 20:06:46\"},\"name\":\"American-Style
+        Premium Lager\",\"description\":\"This style has low malt (and adjunct) sweetness,
+        is medium bodied, and should contain no or a low percentage (less than 25%)
+        of adjuncts. Color may be light straw to golden. Alcohol content and bitterness
+        may also be greater. Hop aroma and flavor is low or negligible. Light fruity
+        esters are acceptable. Chill haze and diacetyl should be absent. Note: Some
+        beers marketed as \\\"premium\\\" (based on price) may not fit this definition.\",\"ibuMin\":\"6\",\"ibuMax\":\"15\",\"abvMin\":\"4.3\",\"abvMax\":\"5\",\"srmMin\":\"2\",\"srmMax\":\"6\",\"ogMin\":\"1.044\",\"fgMin\":\"1.01\",\"fgMax\":\"1.014\",\"createDate\":\"2012-03-21
+        20:06:46\"}},{\"id\":\"HPC9eo\",\"name\":\"Lone Star\",\"description\":\"The
+        National Beer of Texas\\n\\\\Lone Star beer uses the finest hops from the
+        Pacific Northwest with hearty grains from the Central and Northern Plains.
+        The GABF recognized Lone Star as a high quality American Cream Lager by awarding
+        it with a silver medal. Malted barley and corn extract combine to provide
+        Lone Star with nature's finest ingredients for brewing. Lone Star's ingredients
+        give this beer its full natural flavor. The choicest hops lend complexity
+        and aroma to this beer  body and character.\\\"\",\"abv\":\"4.65\",\"styleId\":97,\"isOrganic\":\"N\",\"status\":\"verified\",\"statusDisplay\":\"Verified\",\"createDate\":\"2012-01-03
+        02:43:38\",\"updateDate\":\"2012-03-22 13:04:59\",\"style\":{\"id\":97,\"categoryId\":8,\"category\":{\"id\":8,\"name\":\"North
+        American Lager\",\"createDate\":\"2012-03-21 20:06:46\"},\"name\":\"American-Style
+        Premium Lager\",\"description\":\"This style has low malt (and adjunct) sweetness,
+        is medium bodied, and should contain no or a low percentage (less than 25%)
+        of adjuncts. Color may be light straw to golden. Alcohol content and bitterness
+        may also be greater. Hop aroma and flavor is low or negligible. Light fruity
+        esters are acceptable. Chill haze and diacetyl should be absent. Note: Some
+        beers marketed as \\\"premium\\\" (based on price) may not fit this definition.\",\"ibuMin\":\"6\",\"ibuMax\":\"15\",\"abvMin\":\"4.3\",\"abvMax\":\"5\",\"srmMin\":\"2\",\"srmMax\":\"6\",\"ogMin\":\"1.044\",\"fgMin\":\"1.01\",\"fgMax\":\"1.014\",\"createDate\":\"2012-03-21
+        20:06:46\"}}],\"status\":\"success\"}"
+    http_version:
+  recorded_at: Fri, 15 Aug 2014 00:53:44 GMT
+recorded_with: VCR 2.9.2

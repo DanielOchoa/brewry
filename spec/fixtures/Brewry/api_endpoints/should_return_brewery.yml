@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/breweries?key=xxx&name=Karbach%20Brewing%20Company
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 15 Aug 2014 01:33:45 GMT
+      Server:
+      - Apache/2.2.27 (Amazon)
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.3.28
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '380'
+      Content-Length:
+      - '1254'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"currentPage\":1,\"numberOfPages\":1,\"totalResults\":1,\"data\":[{\"id\":\"gJZUdw\",\"name\":\"Karbach
+        Brewing Company\",\"description\":\"We like beer. A lot. \\r\\n\\r\\nOur background
+        is in the beer biz. Everything from distribution and importing to German training
+        and brewery operations. A few years ago we had an opportunity that would allow
+        us to open up our own brewery. We jumped on it.\\r\\n\\r\\nWe\\u2019re extremely
+        excited about this project, and we think it shows in everything we do. This
+        is just plain fun for us. The day it starts to feel like a job is the day
+        when lightning shall strike us dead. Cause, hey, at the end of the day we're
+        making beer. And beer is fun.\\r\\n\\r\\nJoin us, it should be a kick ass
+        ride with some cool stops along the way!\",\"website\":\"http:\\/\\/www.karbachbrewing.com\\/\",\"established\":\"2011\",\"isOrganic\":\"N\",\"images\":{\"icon\":\"https:\\/\\/s3.amazonaws.com\\/brewerydbapi\\/brewery\\/gJZUdw\\/upload_o7uwfI-icon.png\",\"medium\":\"https:\\/\\/s3.amazonaws.com\\/brewerydbapi\\/brewery\\/gJZUdw\\/upload_o7uwfI-medium.png\",\"large\":\"https:\\/\\/s3.amazonaws.com\\/brewerydbapi\\/brewery\\/gJZUdw\\/upload_o7uwfI-large.png\"},\"status\":\"verified\",\"statusDisplay\":\"Verified\",\"createDate\":\"2012-01-03
+        02:41:59\",\"updateDate\":\"2012-06-26 16:47:32\"}],\"status\":\"success\"}"
+    http_version:
+  recorded_at: Fri, 15 Aug 2014 01:33:45 GMT
+recorded_with: VCR 2.9.2
