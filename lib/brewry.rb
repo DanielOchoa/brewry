@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'httparty'
 require 'utils/string_utils'
+require 'brewry/exceptions'
 
 class Brewry
   # TODO: Change class so it needs to be instantiated
@@ -95,6 +96,11 @@ class Brewry
   end
 
   def self.clean_search_hash
+    unless @@api_key
+      raise MissingApiKey, "You must set a brewerydb api key before you can "\
+                           "use this gem. Please see http://www.brewerydb.com"\
+                           "/developers/docs for more information."
+    end
     { query: { key: @@api_key } }
   end
 
