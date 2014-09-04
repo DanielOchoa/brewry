@@ -3,7 +3,7 @@ require 'httparty'
 require 'utils/string_utils'
 require 'brewry/exceptions'
 
-class Brewry
+module Brewry
   # TODO: Change class so it needs to be instantiated
   using StringUtils
   include HTTParty
