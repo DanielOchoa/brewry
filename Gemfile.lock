@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Brewry (0.0.2)
+    Brewry (0.0.3)
       httparty (~> 0.13)
 
 GEM
